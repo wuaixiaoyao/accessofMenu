@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="ajax-data.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+</head>
+<body>
+    <div id="app">
+    <div v-for="(value,index) in view_to_menu">
+        {{ index }} : {{ value }}
+    </div>
+  </div>
+
+  <script>
+  console.log(DropbeatsMenu);
+    new Vue({
+      el: '#app',
+      data: {
+        view_to_menu:dbmenus
+    }
+})
+</script>
+</body>
+</html>
